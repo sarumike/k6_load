@@ -23,4 +23,5 @@ This option will create a data file output.txt with all the requests sent  in th
 
 
 
+NB some example results are also included to shown the output from K6
 
