@@ -1,0 +1,38 @@
+
+         /\      Grafana   /??/
+    /\  /  \     |\  __   /  /
+   /  \/    \    | |/ /  /   ??\
+  /          \   |   (  |  (?)  |
+ / __________ \  |_|\_\  \_____/
+
+     execution: local
+        script: test_ramping_load.js
+        output: json (raw_results_ramping_load.json)
+
+     scenarios: (100.00%) 1 scenario, 50 max VUs, 6m0s max duration (incl. graceful stop):
+              * contacts: Up to 50 looping VUs for 6m0s over 2 stages (gracefulRampDown: 0s, gracefulStop: 30s)
+
+
+     data_received..................: 440 MB 1.2 MB/s
+     data_sent......................: 1.9 MB 5.4 kB/s
+     getBlock.......................: avg=94.777891 min=62.9715   med=86.4503   max=414.9721  p(90)=124.11018 p(95)=145.02557
+     http_req_blocked...............: avg=0.71ms    min=0.00ms    med=0.00ms    max=890.42ms  p(90)=0.00ms    p(95)=0.00ms
+     http_req_connecting............: avg=0.22ms    min=0.00ms    med=0.00ms    max=46.82ms   p(90)=0.00ms    p(95)=0.00ms
+     http_req_duration..............: avg=85.91ms   min=15.10ms   med=83.31ms   max=414.97ms  p(90)=120.55ms  p(95)=141.01ms
+       { expected_response:true }...: avg=85.91ms   min=15.10ms   med=83.31ms   max=414.97ms  p(90)=120.55ms  p(95)=141.01ms
+     http_req_failed................: 0.00%  0 out of 4278
+     http_req_receiving.............: avg=48.15ms   min=0.00ms    med=44.36ms   max=288.30ms  p(90)=78.27ms   p(95)=95.12ms
+     http_req_sending...............: avg=0.33ms    min=0.00ms    med=0.24ms    max=3.95ms    p(90)=0.72ms    p(95)=0.92ms
+     http_req_tls_handshaking.......: avg=0.49ms    min=0.00ms    med=0.00ms    max=841.64ms  p(90)=0.00ms    p(95)=0.00ms
+     http_req_waiting...............: avg=37.43ms   min=15.10ms   med=36.69ms   max=318.16ms  p(90)=42.86ms   p(95)=48.24ms
+     http_reqs......................: 4278   11.883329/s
+     iteration_duration.............: avg=2087.67ms min=2015.92ms med=2084.83ms max=2958.17ms p(90)=2123.18ms p(95)=2143.08ms
+     iterations.....................: 4231   11.752774/s
+     systemChain....................: avg=20.064614 min=15.0961   med=18.2114   max=275.023   p(90)=22.18946  p(95)=23.6529
+     vus............................: 1      min=0         max=50
+     vus_max........................: 50     min=50        max=50
+
+
+running (6m00.0s), 00/50 VUs, 4231 complete and 50 interrupted iterations
+contacts ? [======================================] 00/50 VUs  6m0s
+
